@@ -50,13 +50,13 @@ export abstract class NgModel implements ng.INgModelController {
   $commitViewValue(): void {
   }
 
-  $processModelValue(): void {
-  }
-
   $overrideModelOptions(options: INgModelOptions): void {
   }
 
   $isEmpty( value: any ): boolean {
     return undefined;
+  }
+
+  $processModelValue(): void {
   }
 }
