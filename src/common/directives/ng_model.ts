@@ -1,4 +1,5 @@
 import { Directive } from '../../core/directives/decorators';
+import INgModelOptions = ng.INgModelOptions;
 
 @Directive( { selector: '[ng-model]' } )
 export abstract class NgModel implements ng.INgModelController {
@@ -47,6 +48,12 @@ export abstract class NgModel implements ng.INgModelController {
   }
 
   $commitViewValue(): void {
+  }
+
+  $processModelValue(): void {
+  }
+
+  $overrideModelOptions(options: INgModelOptions): void {
   }
 
   $isEmpty( value: any ): boolean {
