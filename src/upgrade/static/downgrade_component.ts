@@ -77,7 +77,7 @@ export function _downgradeComponent({component,downgradeFn}: ProvideNg2Component
   const {inputs=[],outputs=[]} = _getOnlyInputOutputMetadata(propAnnotations) || {};
 
   // process @Component
-  const annotations = reflector.annotations(component);
+  const annotations = (component as any).__annotations__ || reflector.annotations(component);
   const cmpAnnotation = annotations[0];
   const directiveName = resolveDirectiveNameFromSelector(cmpAnnotation.selector);
 
